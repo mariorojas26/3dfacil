@@ -15,10 +15,11 @@ $(function() {
         var scroll = $(window).scrollTop();
         if (scroll < 20) {
             $(".header_navbar").removeClass("sticky");
-            $(".header_navbar img").attr("src", "assets/images/logo.svg");
+            $(".header_navbar img").attr("src", "assets/images/logo3d.png");
         } else {
             $(".header_navbar").addClass("sticky");
-            $(".header_navbar img").attr("src", "assets/images/logo-2.svg");
+            $(".header_navbar img").attr("src", "assets/images/logo3d.png");
+            // logo de otro color
         }
     });
     
