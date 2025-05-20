@@ -99,7 +99,7 @@ function type() {
   if(index < text.length) {
     typingElement.textContent += text.charAt(index);
     index++;
-    setTimeout(type, 30);
+    setTimeout(type, 35);
   }
 }
 
