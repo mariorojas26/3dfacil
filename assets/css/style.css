@@ -900,7 +900,8 @@ p {
 
 @media (max-width: 767px) {
   .header_image .image .dots {
-    width: 100px;
+        top: 102px;
+        width: 232px;
   }
 }
 

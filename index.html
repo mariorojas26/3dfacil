@@ -31,6 +31,10 @@
     
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css">
+
+     <!--====== AOS CSS ======-->
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     
 </head>
 
@@ -123,12 +127,13 @@
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
-            <div class="header_image d-flex align-items-end">
-                <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="1.8s">
-                    <img class="w-100" src="assets/images/header_app.png" alt="header App">
-                    <img src="assets/images/dots.svg" alt="dots" class="dots">
-                </div> <!-- image -->
-            </div> <!-- header image -->
+        <div class="header_image d-flex align-items-end">
+            <div class="image" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="400">
+                <img class="w-100" src="assets/images/header_app.png" alt="header App">
+                <img src="assets/images/dots.svg" alt="dots" class="dots">
+            </div>
+        </div>
+
         </div> <!-- header hero -->
     </section>
 
@@ -503,7 +508,12 @@
     <!--====== PART ENDS ======-->
     
 
+     <!--====== AOS JS ======-->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+    <script>
+    AOS.init();
+    </script>
 
 
     <!--====== Jquery js ======-->
