@@ -485,7 +485,11 @@ p {
 .navbar-brand {
   padding: 0;
 }
-
+@media (max-width: 969px) {
+.navbar-brand {
+    display: contents !important;
+  }
+}
 .navbar-toggler {
   padding: 0;
 }
