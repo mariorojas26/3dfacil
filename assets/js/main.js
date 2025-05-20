@@ -91,18 +91,18 @@ $(function() {
     //===== 
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+const text = "Hacemos que tus productos cobren vida, creando experiencias que tus clientes nunca olvidarán.";
+const typingElement = document.getElementById('typing-text');
+let index = 0;
+
+function type() {
+  if(index < text.length) {
+    typingElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(type, 30);
+  }
+}
+
+type();
+
 });
