@@ -35,6 +35,11 @@
      <!--====== AOS CSS ======-->
 
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  
+
+
+    
     
 </head>
 
@@ -45,22 +50,19 @@
 
     <!--====== PRELOADER PART START ======-->
 
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="preloader">
+    <dotlottie-player
+      src="assets/lottie/robot.lottie"
+      background="transparent"
+      speed="1"
+      style="width: 200px; height: 200px"
+      loop autoplay>
+    </dotlottie-player>
+  </div>
+
+
+
+
 
     <!--====== PRELOADER PART ENDS ======-->
     
@@ -118,9 +120,10 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="header_hero_content mt-10">
-                            <h2 class="header_title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s">Permite que tus clientes vean tus productos en su propio entorno..</h2>
-                           <p id="typing-text" class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s"></p>
+                            <h2 id="typewriter-title" class="header_title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        </h2>
 
+                            <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">Hacemos que tus productos cobren vida, creando experiencias que tus clientes nunca olvidarán</p>
                             <ul>                              
                                 <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" href="#">Ver más</a></li>
                             </ul>
@@ -374,7 +377,7 @@
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-25">
                         <h4 class="title">From The Blog</h4>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore.</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore .</p>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -535,6 +538,12 @@
     
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
+
+    
+    <!--====== SPINNER LOTIFILE ======-->
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
     
 </body>
 

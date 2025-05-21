@@ -91,18 +91,39 @@ $(function() {
     //===== 
     
     
-const text = "Hacemos que tus productos cobren vida, creando experiencias que tus clientes nunca olvidarán.";
-const typingElement = document.getElementById('typing-text');
-let index = 0;
-
-function type() {
-  if(index < text.length) {
-    typingElement.textContent += text.charAt(index);
-    index++;
-    setTimeout(type, 35);
-  }
-}
-
-type();
-
 });
+
+//EFECTO MAQUINA DE ESCRIBIR
+
+document.addEventListener("DOMContentLoaded", function () {
+  const text = "Permite que tus clientes vean tus productos en su propio entorno.";
+  const titleElement = document.getElementById("typewriter-title");
+
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      titleElement.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 30); 
+    }
+  }
+
+  typeWriter();
+});
+
+//SPINER ROBOT
+
+window.addEventListener("load", () => {
+  document.querySelector(".preloader").style.display = "none";
+});
+
+window.addEventListener("load", () => {
+  const preloader = document.querySelector(".preloader");
+  if (preloader) {
+    preloader.classList.add("hidden");
+    setTimeout(() => {
+      preloader.remove(); // Elimina completamente el preloader del DOM
+    }, 500); // Espera a que la transición termine
+  }
+});
+
