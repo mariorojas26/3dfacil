@@ -186,6 +186,7 @@ p {
 .section_title .title {
   font-size: 44px;
   font-weight: 700;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
@@ -1784,8 +1785,8 @@ p {
 }
 
 .boton-blanco-animado:hover {
-  background-color: #ffffff;
-  color: #000000;
+  text-decoration: underline;
+  color: black;
 }
 
 /* Animación del borde */
@@ -1812,9 +1813,9 @@ p {
 
 
 .section_title {
-    justify-content: left;
-    align-items: left;
-    justify-self: left;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
     display: flex;
     flex-direction: column;
  
