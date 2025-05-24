@@ -129,28 +129,28 @@ window.addEventListener("load", () => {
 
 
 //Giro servicios
-  document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".card-services");
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card-services");
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("rotate");
-          } else {
-            entry.target.classList.remove("rotate"); // permite volver a girar si el usuario sube
-          }
-        });
-      },
-      {
-        threshold: 0.3, // activa cuando el 80% de la tarjeta está visible
-      }
-    );
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("rotate");
+        } else {
+          entry.target.classList.remove("rotate");
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
 
-    cards.forEach(card => {
-      observer.observe(card);
-    });
+  cards.forEach(card => {
+    observer.observe(card);
   });
+});
 
 //Giro servicios
 
