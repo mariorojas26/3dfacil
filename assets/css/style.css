@@ -1832,7 +1832,14 @@ p {
   border: 1px solid #d5d5d5;
   border-radius: 20px;
   margin-bottom: 26px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  perspective: 1000px;
  }
+ .card-services.rotate {
+  transform: rotateY(360deg);
+}
  .box-services{
     row-gap: 40px;
     justify-content: center;
