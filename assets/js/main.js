@@ -143,7 +143,7 @@ window.addEventListener("load", () => {
         });
       },
       {
-        threshold: 0.5, // activa cuando el 50% de la tarjeta está visible
+        threshold: 0.2, // activa cuando el 80% de la tarjeta está visible
       }
     );
 
