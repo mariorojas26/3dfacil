@@ -1760,6 +1760,66 @@ p {
   }
 }
 
+
+.boton-blanco-animado {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background-image:
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(270deg, #4b0082, #e9e4eb, #4b0082); /* degradado animado */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 300% 300%; /* más grande para animación visible */
+  animation: animarBorde 4s linear infinite;
+  transition: all 0.3s ease;
+  margin-top: 25px;
+  width: 62%;
+  display: flex;
+  justify-content: center;
+}
+
+.boton-blanco-animado:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Animación del borde */
+@keyframes animarBorde {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen  and (max-width:780px) {
+  a.boton-blanco-animado{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+       
+  }
+}
+
+
+.section_title {
+    justify-content: left;
+    align-items: left;
+    justify-self: left;
+    display: flex;
+    flex-direction: column;
+ 
+ }
+
 /*END Estilos para mockup principal*/
 
 /*# sourceMappingURL=style.css.map */
