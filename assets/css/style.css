@@ -193,6 +193,9 @@ p {
   .section_title .title {
     font-size: 32px;
   }
+  .section_title p {
+    text-align: center;
+}
 }
 
 .section_title p {
