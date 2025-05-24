@@ -1025,8 +1025,8 @@ p {
 }
 
 .single_features {
-  background-color: #fff;
-  padding: 60px 25px;
+  background-color: transparent;
+  padding: 0px;
   border-radius: 10px;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
@@ -1713,6 +1713,24 @@ p {
   height: 100%;
   object-fit: cover;
 }
+
+.contenedor-video-unico-3d {
+  width: 100%;
+  max-width: 100%; /* o el tamaño que quieras */
+  height: 400px;
+  aspect-ratio: 16 / 9; /* Mantén la proporción si aplica */
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.video-unico-ajustado-3d {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
 
 /*END Estilos para mockup principal*/
 
