@@ -187,8 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "none",
     scrollTrigger: {
       trigger: ".coheteScroll__seccion",
-      start: "bottom 50%",    // Empieza a oscurecer al acercarse al final
-      end: "bottom 30%",      // Ya completamente negro antes de salir
+      start: "bottom 40%",    // Empieza a oscurecer al acercarse al final
+      end: "bottom 10%",      // Ya completamente negro antes de salir
       scrub: true
     }
   });
