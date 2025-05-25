@@ -152,5 +152,45 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
 //Giro servicios
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Animar el cohete hacia arriba
+  gsap.to(".coheteScroll__cohete", {
+    y: "-100vh",
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".coheteScroll__seccion",
+      start: "top 20%",       // Inicia cuando ya se ve parte de la sección
+      end: "bottom 20%",      // Termina justo antes de salir
+      scrub: true
+    }
+  });
+
+  // Cortina negra se desvanece al entrar
+  gsap.to(".coheteScroll__cortinaNegra", {
+    opacity: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".coheteScroll__seccion",
+      start: "top 80%",       // Comienza a desvanecerse más tarde
+      end: "top 0%",          // Termina cuando el top toca el viewport
+      scrub: true
+    }
+  });
+
+  // Cortina negra vuelve al salir
+  gsap.to(".coheteScroll__cortinaNegra", {
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".coheteScroll__seccion",
+      start: "bottom 50%",    // Empieza a oscurecer al acercarse al final
+      end: "bottom 30%",      // Ya completamente negro antes de salir
+      scrub: true
+    }
+  });
+});
 

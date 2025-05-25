@@ -235,7 +235,7 @@
 
     <!--====== APP FEATURES PART ENDS ======-->
     
-    <!--====== VIDEO PART START ======-->
+    <!--====== SERVICES PART START ======-->
 
     <section id="video" class="pt-80 pb-80">
         <div class="container">
@@ -318,10 +318,26 @@
         </div> <!-- container -->
     </section>
 
-<section id="screenshot">
-    
+
+        <!--====== CARDS PART START ======-->
+
+  <!--====== ROCKET START ======-->
+  
+<section class="coheteScroll__seccion">
+  <div class="coheteScroll__contenedor">
+    <video class="coheteScroll__fondo" autoplay muted loop playsinline>
+  <source src="assets/video/galaxy3.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
+    <img src="assets/images/cohete.png" class="coheteScroll__cohete" alt="Cohete" />
+    <div class="coheteScroll__cortinaNegra"></div>
+  </div>
 </section>
-    
+
+
+
+<!--====== ROCKET END ======-->
+
     <!--====== PRICNG PART START ======-->
 
     <section id="pricing" class="pricing_area mt-10 pt-75 pb-80">
@@ -622,6 +638,12 @@
     <!--====== SPINNER LOTIFILE ======-->
 
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+    <!--======  GSAP + ScrollTrigger JS ======-->
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="js/scroll-rocket.js"></script>
 
     
 </body>

@@ -1846,5 +1846,55 @@ p {
  }
 
 /*END Estilos para mockup principal*/
+.coheteScroll__seccion {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.coheteScroll__contenedor {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.coheteScroll__fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.coheteScroll__cohete {
+     position: absolute;
+    bottom: -400px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 599px;
+    z-index: 2;
+}
+@media screen and (max-width:790px) {
+   .coheteScroll__cohete{
+        bottom: -250px;
+        width: 400px;
+   }
+}
+.coheteScroll__cortinaNegra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 1;
+}
+
 
 /*# sourceMappingURL=style.css.map */
