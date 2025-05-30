@@ -186,9 +186,17 @@ p {
 .section_title .title {
   font-size: 44px;
   font-weight: 700;
+}
+.title {
+  font-size: 44px;
+  font-weight: 700;
+}
+.center{
   text-align: center;
 }
-
+.left{
+  text-align: left;
+}
 @media (max-width: 767px) {
   .section_title .title {
     font-size: 32px;
@@ -1845,56 +1853,148 @@ p {
     justify-content: center;
  }
 
-/*END Estilos para mockup principal*/
-.coheteScroll__seccion {
+.boton-minimalista {
+  background: linear-gradient(90deg, #7A5BCF, #49007a); /* Degradado morado */
+  color: #ffffff;             /* Texto blanco */
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  padding: 0.75em 1.5em;      /* Espaciado */
+  border: none;
+  border-radius: 9999px;      /* Bordes redondeados */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.boton-minimalista:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos únicos para sección "¿Por qué elegirnos?" */
+
+.lista-elegirnos-rd {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lista-elegirnos-rd li {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  list-style-type:disc;
 }
 
-.coheteScroll__contenedor {
-  position: sticky;
-  top: 0;
-  height: 100vh;
+.section-elegirnos-rd {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 2rem;
+}
+
+.fondo-degrade {
   width: 100%;
-  overflow: hidden;
+  background: linear-gradient(90deg, #8947DA 0%, #aa80df 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 10px;
+  flex-wrap: wrap; /* importante para que se adapte en mobile */
+  gap: 1.5rem;
+  position: relative;
+  height: 246px;
+  margin-bottom: 90px;
+
 }
 
-.coheteScroll__fondo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+.fondo-degrade-1 {
+  background: linear-gradient(90deg, #7A5BCF, #49007a); /* Degradado morado */
 }
 
-.coheteScroll__cohete {
-     position: absolute;
-    bottom: -400px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 599px;
-    z-index: 2;
-}
-@media screen and (max-width:790px) {
-   .coheteScroll__cohete{
-        bottom: -250px;
-        width: 400px;
-   }
-}
-.coheteScroll__cortinaNegra {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  z-index: 3;
-  pointer-events: none;
-  opacity: 1;
+.fondo-degrade-2 {
+  background: linear-gradient(90deg, #7A5BCF, #49007a); /* Degradado morado */
+    flex-direction: row-reverse;
 }
 
 
+.fondo-degrade-3 {
+  background: linear-gradient(90deg, #7A5BCF, #49007a); /* Degradado morado */
+  columns: reverse;
+}
+
+
+.bloque-texto,
+.bloque-imagen {
+  flex: 1 1 300px; /* se adapta y colapsa en mobile */
+}
+
+.titulo-bloque {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.parrafo-bloque {
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.troll-img-rd-1 {
+    max-width: 445px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: -107px;
+    right: 71px;
+}
+.troll-img-rd-2 {
+    max-width: 469px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: -95px;
+    left: 17px;
+}
+.troll-img-rd-3 {
+    max-width: 472px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: -109px;
+    right: 32px;
+}
+@media screen and (max-width:790px){
+  .fondo-degrade{
+  height: 433px;
+  gap: 1.5rem;
+  }
+  .troll-img-rd-1 {
+          max-width: 331px;
+        top: 281px;
+        right: 24px;
+}
+.troll-img-rd-2 {
+           max-width: 349px;
+        top: 266px;
+        left: 5px;
+}
+.troll-img-rd-3 {
+             max-width: 372px;
+        top: 196px;
+        left: -11px;
+}
+.section-elegirnos-rd {
+    gap: 5rem;
+
+}
+}
 /*# sourceMappingURL=style.css.map */
