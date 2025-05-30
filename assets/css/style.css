@@ -1898,7 +1898,7 @@ p {
 
 .fondo-degrade {
   width: 100%;
-  background: linear-gradient(90deg, #8947DA 0%, #aa80df 100%);
+  background: #10101C;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1913,17 +1913,17 @@ p {
 }
 
 .fondo-degrade-1 {
-  background: linear-gradient(90deg, #7A5BCF, #49007a); /* Degradado morado */
+  background-color: #10101C; /* Degradado morado */
 }
 
 .fondo-degrade-2 {
-  background: linear-gradient(90deg, #7A5BCF, #49007a); /* Degradado morado */
+  background-color: #10101C; /* Degradado morado */
     flex-direction: row-reverse;
 }
 
 
 .fondo-degrade-3 {
-  background: linear-gradient(90deg, #7A5BCF, #49007a); /* Degradado morado */
+  background-color: #10101C; /* Degradado morado */
   columns: reverse;
 }
 
