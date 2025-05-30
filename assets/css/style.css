@@ -1978,17 +1978,20 @@ p {
   gap: 1.5rem;
   }
   .troll-img-rd-1 {
-          max-width: 331px;
+      width: 331px;
+      max-width:100%;
         top: 281px;
         right: 24px;
 }
 .troll-img-rd-2 {
-           max-width: 349px;
+        width: 330px;
+        max-width: 100%;
         top: 266px;
         left: 5px;
 }
 .troll-img-rd-3 {
-             max-width: 372px;
+          width: 372px;
+          max-width: 100%;
         top: 196px;
         left: -11px;
 }
