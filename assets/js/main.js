@@ -1,99 +1,81 @@
-$(function() {
-    
-    "use strict";
-    
-    //===== Prealoder
-    
-    $(window).on('load', function(event) {
-        $('.preloader').delay(100).fadeOut(100);
-    });
-    
-    
-    //===== Sticky
+$(function () {
+  "use strict";
 
-    $(window).on('scroll', function (event) {
-        var scroll = $(window).scrollTop();
-        if (scroll < 20) {
-            $(".header_navbar").removeClass("sticky");
-            $(".header_navbar img").attr("src", "assets/images/logo3d.png");
-        } else {
-            $(".header_navbar").addClass("sticky");
-            $(".header_navbar img").attr("src", "assets/images/logo3d.png");
-            // logo de otro color
+  //===== Prealoder
+  $(window).on("load", function (event) {
+    $(".preloader").delay(100).fadeOut(100);
+  });
+
+  //===== Sticky
+  $(window).on("scroll", function (event) {
+    var scroll = $(window).scrollTop();
+    if (scroll < 20) {
+      $(".header_navbar").removeClass("sticky");
+      $(".header_navbar img").attr("src", "assets/images/logo3d.png");
+    } else {
+      $(".header_navbar").addClass("sticky");
+      $(".header_navbar img").attr("src", "assets/images/logo3d.png");
+    }
+  });
+
+  //===== Section Menu Active (con validación del hash)
+  var scrollLink = $(".page-scroll");
+  $(window).scroll(function () {
+    var scrollbarLocation = $(this).scrollTop();
+
+    scrollLink.each(function () {
+      var target = $(this.hash);
+      if (target.length) { // Solo si el destino existe
+        var sectionOffset = target.offset().top - 73;
+        if (sectionOffset <= scrollbarLocation) {
+          $(this).parent().addClass("active");
+          $(this).parent().siblings().removeClass("active");
         }
+      }
     });
-    
-    
-    //===== Section Menu Active
+  });
 
-    var scrollLink = $('.page-scroll');
-    // Active link switching
-    $(window).scroll(function () {
-        var scrollbarLocation = $(this).scrollTop();
+  //===== Close navbar-collapse when a link clicked
+  $(".navbar-nav a").on("click", function () {
+    $(".navbar-collapse").removeClass("show");
+  });
 
-        scrollLink.each(function () {
+  $(".navbar-toggler").on("click", function () {
+    $(this).toggleClass("active");
+  });
 
+  $(".navbar-nav a").on("click", function () {
+    $(".navbar-toggler").removeClass("active");
+  });
 
-            if (sectionOffset <= scrollbarLocation) {
-                $(this).parent().addClass('active');
-                $(this).parent().siblings().removeClass('active');
-            }
-        });
-    });
-    
-    //===== close navbar-collapse when a  clicked
+  //===== Back to top
+  $(window).on("scroll", function (event) {
+    if ($(this).scrollTop() > 600) {
+      $(".back-to-top").fadeIn(200);
+    } else {
+      $(".back-to-top").fadeOut(200);
+    }
+  });
 
-    $(".navbar-nav a").on('click', function () {
-        $(".navbar-collapse").removeClass("show");
-    });
+  $(".back-to-top").on("click", function (event) {
+    event.preventDefault();
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1500
+    );
+  });
 
-    $(".navbar-toggler").on('click', function () {
-        $(this).toggleClass("active");
-    });
-
-    $(".navbar-nav a").on('click', function () {
-        $(".navbar-toggler").removeClass('active');
-    });
-    
-    
-    //===== Back to top
-    
-    // Show or hide the sticky footer button
-    $(window).on('scroll', function(event) {
-        if($(this).scrollTop() > 600){
-            $('.back-to-top').fadeIn(200)
-        } else{
-            $('.back-to-top').fadeOut(200)
-        }
-    });
-    
-    
-    //Animate the scroll to yop
-    $('.back-to-top').on('click', function(event) {
-        event.preventDefault();
-        
-        $('html, body').animate({
-            scrollTop: 0,
-        }, 1500);
-    });
-    
-    
-    //=====  WOW active
-    
-    var wow = new WOW({
-        boxClass: 'wow', //
-        mobile: false, // 
-    })
-    wow.init();
-    
-    
-    //===== 
-    
-    
+  //===== WOW active
+  var wow = new WOW({
+    boxClass: "wow",
+    mobile: false,
+  });
+  wow.init();
 });
 
-//EFECTO MAQUINA DE ESCRIBIR
-
+//===== EFECTO MAQUINA DE ESCRIBIR
 document.addEventListener("DOMContentLoaded", function () {
   const text = "Permite que tus clientes vean tus productos en su propio entorno.";
   const titleElement = document.getElementById("typewriter-title");
@@ -103,15 +85,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (i < text.length) {
       titleElement.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 30); 
+      setTimeout(typeWriter, 30);
     }
   }
 
   typeWriter();
 });
 
-//SPINER ROBOT
-
+//===== SPINER ROBOT
 window.addEventListener("load", () => {
   document.querySelector(".preloader").style.display = "none";
 });
@@ -121,36 +102,13 @@ window.addEventListener("load", () => {
   if (preloader) {
     preloader.classList.add("hidden");
     setTimeout(() => {
-      preloader.remove(); // Elimina completamente el preloader del DOM
-    }, 500); // Espera a que la transición termine
+      preloader.remove();
+    }, 500);
   }
 });
 
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('modal-explicacion');
-  const btnCerrar = document.getElementById('cerrar-modal');
-  const seccion3D = document.querySelector('.mi-seccion-3d');
-
-  // Configurar IntersectionObserver
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Mostrar modal
-        modal.style.display = 'block';
-        // Dejar de observar para que no aparezca de nuevo
-        observer.unobserve(seccion3D);
-      }
-    });
-  }, { threshold: 0.5 }); // Se activa cuando la mitad de la sección es visible
-
-  observer.observe(seccion3D);
-
-  // Cerrar modal
-  btnCerrar.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+//===== BOTÓN AR EXTERNO
+document.getElementById("boton-ar").addEventListener("click", () => {
+  const modelViewer = document.querySelector("model-viewer");
+  modelViewer.activateAR();
 });
-

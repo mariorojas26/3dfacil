@@ -2051,14 +2051,13 @@ p {
 }
 .mi-seccion-3d {
   padding: 50px 20px;
-  background: #f0f0f0;
   position: relative;
 }
 .mi3d{
-    position: absolute;
+position: absolute;
     width: 300px ! IMPORTANT;
-    top: 60px;
-    left: 141px;
+    bottom: 0px;
+    right: 45px;
     z-index: 1;
 }
 .mi3d-2{
@@ -2070,7 +2069,7 @@ p {
 }
 /* Contenedor del visor */
 .mi-seccion-3d .container {
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   background: #ffffff;
   padding: 20px;
@@ -2081,7 +2080,6 @@ p {
 /* Título del visor */
 .mi-seccion-3d h2 {
   text-align: center;
-  margin-bottom: 15px;
   font-size: 24px;
   color: #444;
 }
@@ -2125,5 +2123,33 @@ p {
   cursor: pointer;
 }
 
+.icono-instruccion {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.btn-boton-ar {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-boton-ar:hover {
+  background-color: #e65100;
+}
+
+.btn-boton-ar img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
 
 /*# sourceMappingURL=style.css.map */
