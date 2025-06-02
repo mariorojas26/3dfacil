@@ -2152,6 +2152,7 @@ p {
 @media (min-width: 780px) {
   .d-desktop {
     display: flex; /* o block según necesidad */
+    align-items: center;
   }
 }
   .d-mobile {
@@ -2162,6 +2163,7 @@ p {
 @media (max-width: 780px) {
   .d-mobile {
     display: flex; /* o block según necesidad */
+    align-items: center;
   }
   .d-desktop{
     display: none;
