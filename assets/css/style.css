@@ -2158,12 +2158,23 @@ p {
   .d-mobile {
     display: none; /* o block según necesidad */
   }
+  .toca{
+    display: none;
+  }
+    .tocaaqui{
+    position: absolute;
+    width: 250px;
+    bottom: -42px;
+    right: 94px;
+    z-index: 2;
+  }
 
 
 @media (max-width: 780px) {
   .d-mobile {
     display: flex; /* o block según necesidad */
     align-items: center;
+    justify-content: center;
   }
   .d-desktop{
     display: none;
@@ -2174,7 +2185,12 @@ p {
         bottom: -57px;
         right: 75px;
         z-index: 2;
+        display: flex;
   }
+  .tocaaqui{
+    display: none;
+  }
+  
 }
 
 /*# sourceMappingURL=style.css.map */
