@@ -2000,4 +2000,85 @@ p {
 
 }
 }
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(90deg, #7A5BCF, #49007a); /* Degradado morado */
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 9999;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.boton-flotante:hover {
+  animation-play-state: paused; /* pausa el pulso */
+  transform: scale(1.15); /* crece al hacer hover */
+  color: white;
+}
+
+.boton-flotante i {
+  z-index: 1;
+}
+
+.boton-flotante::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+  animation: brillo 5s linear infinite;
+}
+
+@keyframes brillo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.mi-seccion-3d {
+  padding: 50px 20px;
+  background: #f0f0f0;
+}
+
+/* Contenedor del visor */
+.mi-seccion-3d .container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Título del visor */
+.mi-seccion-3d h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #444;
+}
+
+/* Estilos específicos para el visor 3D */
+.mi-seccion-3d model-viewer {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  background: #d0d0d0;
+}
+
+
 /*# sourceMappingURL=style.css.map */

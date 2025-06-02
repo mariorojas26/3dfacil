@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="utf-8">
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
     
     <!--====== Title ======-->
     <title>Advanced - App Landing Page Template</title>
@@ -65,7 +68,15 @@
   </div>
 
     <!--====== PRELOADER PART ENDS ======-->
-    
+
+<!--====== WS BUTTON START =====-->
+<a href="https://api.whatsapp.com/send?phone=573008024280&text=¡Hola!%20Quisiera%20más%20información%20sobre%20tus%20soluciones.%20¿Podemos%20conversar?" target="_blank" class="boton-flotante" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<!--====== WS BUTTON ENDS ======-->
+
     <!--====== HEADER PART START ======-->
 
     <section class="header_area">
@@ -176,7 +187,7 @@
                       <i class="fa-solid fa-wand-magic-sparkles fa-3x" style="color: #7e57d1;"></i>
                         <div class="features_content">
                             <h4 class="features_title">Haz que te recuerden</h4>
-                            <p>Crea momentos que conectan. Porque cuando algo sorprende, <strong> JAMÁS </strong> se olvida.</p>
+                            <p>Creamos experiencias que conectan porque cuando algo sorprende <strong>NUNCA</strong> se olvida.</p>
                         </div>
                     </div> <!-- single featuresow -->
                 </div>
@@ -185,7 +196,7 @@
                         <i class="fa-solid fa-clock fa-3x" style="color: #7e57d1;"></i>
                         <div class="features_content">
                             <h4 class="features_title">Ahorra tiempo</h4>
-                            <p>Tus clientes no tienen que ir a la tienda. Lo ven todo en casa, ¡al instante!</p>
+                            <p>Tus clientes no tienen que ir a la tienda lo ven todo en casa al instante</p>
                         </div>
                     </div> <!-- single featuresow -->
                 </div>
@@ -205,6 +216,27 @@
 
 
 
+
+    
+    <!--======3D START ======-->
+    <section class="mi-seccion-3d">
+  <div class="container">
+    <h2>¡Pruebalo tu mismo!</h2>
+    <model-viewer
+      src="assets/3d/cat.glb"
+      alt="Modelo 3D de un dinosaurio"
+      auto-rotate
+      camera-controls
+        autoplay
+         ar
+      shadow-intensity="1"
+      exposure="1"
+      environment-image="neutral">
+    </model-viewer>
+  </div>
+</section>
+
+    <!--====== 3D END ======-->
 
     
     <!--====== ABOUT PART START ======-->
@@ -574,16 +606,17 @@
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
 
+    <!--====== 3D ======-->
+
+    <script type="module" src="assets/js/3d.js"></script>
+
+    
+
+
     
     <!--====== SPINNER LOTIFILE ======-->
 
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-
-    <!--======  GSAP + ScrollTrigger JS ======-->
-
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="js/scroll-rocket.js"></script>
 
     
 </body>
