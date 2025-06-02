@@ -70,7 +70,7 @@ $(function () {
   //===== WOW active
   var wow = new WOW({
     boxClass: "wow",
-    mobile: true,
+    mobile: false,
   });
   wow.init();
 });
