@@ -2171,6 +2171,12 @@ p {
 
 
 @media (max-width: 780px) {
+  .asi{
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
   .d-mobile {
     display: flex; /* o block según necesidad */
     align-items: center;
