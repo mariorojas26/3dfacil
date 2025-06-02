@@ -2052,8 +2052,22 @@ p {
 .mi-seccion-3d {
   padding: 50px 20px;
   background: #f0f0f0;
+  position: relative;
 }
-
+.mi3d{
+    position: absolute;
+    width: 300px ! IMPORTANT;
+    top: 60px;
+    left: 141px;
+    z-index: 1;
+}
+.mi3d-2{
+    position: absolute;
+    width: 300px ! IMPORTANT;
+    top: -60px;
+    left: 141px;
+    z-index: 1;
+}
 /* Contenedor del visor */
 .mi-seccion-3d .container {
   max-width: 800px;
