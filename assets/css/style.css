@@ -2053,20 +2053,6 @@ p {
   padding: 50px 20px;
   position: relative;
 }
-.mi3d{
-position: absolute;
-    width: 300px ! IMPORTANT;
-    bottom: 0px;
-    right: 45px;
-    z-index: 1;
-}
-.mi3d-2{
-    position: absolute;
-    width: 300px ! IMPORTANT;
-    top: -60px;
-    left: 141px;
-    z-index: 1;
-}
 /* Contenedor del visor */
 .mi-seccion-3d .container {
   max-width: 100%;
@@ -2126,13 +2112,17 @@ position: absolute;
   border-radius: 4px;
   cursor: pointer;
 }
-
-.icono-instruccion {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-      margin-right: 14px;
+.instruccion-fila {
+    margin: 22px 0px;
 }
+.icono-instruccion {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 14px;
+}
+
+
 .btn-boton-ar {
   display: inline-flex;
   align-items: center;
@@ -2155,6 +2145,27 @@ position: absolute;
   width: 24px;
   height: 24px;
   margin-right: 8px;
+}
+/* Ocultar por defecto */
+
+/* Mostrar en pantallas mayores a 779px */
+@media (min-width: 780px) {
+  .d-desktop {
+    display: flex; /* o block según necesidad */
+  }
+}
+  .d-mobile {
+    display: none; /* o block según necesidad */
+  }
+
+
+@media (max-width: 780px) {
+  .d-mobile {
+    display: flex; /* o block según necesidad */
+  }
+  .d-desktop{
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
