@@ -129,4 +129,28 @@ window.addEventListener("load", () => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal-explicacion');
+  const btnCerrar = document.getElementById('cerrar-modal');
+  const seccion3D = document.querySelector('.mi-seccion-3d');
+
+  // Configurar IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Mostrar modal
+        modal.style.display = 'block';
+        // Dejar de observar para que no aparezca de nuevo
+        observer.unobserve(seccion3D);
+      }
+    });
+  }, { threshold: 0.5 }); // Se activa cuando la mitad de la sección es visible
+
+  observer.observe(seccion3D);
+
+  // Cerrar modal
+  btnCerrar.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+});
 
