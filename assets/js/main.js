@@ -107,8 +107,3 @@ window.addEventListener("load", () => {
   }
 });
 
-//===== BOTÓN AR EXTERNO
-document.getElementById("boton-ar").addEventListener("click", () => {
-  const modelViewer = document.querySelector("model-viewer");
-  modelViewer.activateAR();
-});

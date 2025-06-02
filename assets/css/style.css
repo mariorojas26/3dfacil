@@ -2076,7 +2076,11 @@ position: absolute;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
+@media screen and (min-width:790px){
+  .mi-seccion-3d .container {
+    max-width: 85%;
+  }
+}
 /* Título del visor */
 .mi-seccion-3d h2 {
   text-align: center;
@@ -2127,6 +2131,7 @@ position: absolute;
   width: 50px;
   height: 50px;
   object-fit: contain;
+      margin-right: 14px;
 }
 .btn-boton-ar {
   display: inline-flex;
