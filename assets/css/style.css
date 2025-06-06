@@ -2105,7 +2105,7 @@ p {
 .mi-seccion-3d h2 {
   text-align: center;
   font-size: 24px;
-  color: #dadada;
+  color: #e7e7e7;
 }
 .mi-seccion-3d p {
   color: #b7b7b7;
@@ -2274,6 +2274,7 @@ p {
 
 .plus-texto p {
   color: white;
+  text-align: justify;
 }
 
 /* Columna de imagen */
@@ -2321,12 +2322,16 @@ p {
 
   .plus-texto p {
     font-size: 1rem;
+      text-align: justify;
   }
 }
 @media screen and (max-width:790px) {
   .ocultar-mobile{
   display: none;
 }
+  .seccion-plus{
+    padding: 6rem 0;
+  }
 }
 
 
