@@ -1755,7 +1755,20 @@ p {
     margin: 0;
     overflow: hidden;
 }
- 
+.separador{
+  position: relative;
+}
+.separador-title{
+    position: absolute;
+    top: 60%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 7rem;
+    width: 100%;
+    z-index: 2;
+    color: #ffffff;
+}
 .svg-wrapper {
     width: 1000px;
     height: auto;
@@ -1894,6 +1907,7 @@ p {
   flex-direction: column;
   gap: 2rem;
   padding-block: 2rem;
+  background-color: #10101C;
 }
 
 .fondo-degrade {
@@ -2052,15 +2066,20 @@ p {
 .mi-seccion-3d {
   padding: 50px 20px;
   position: relative;
+  background-color: #10101C;
 }
 /* Contenedor del visor */
 .mi-seccion-3d .container {
   max-width: 100%;
   margin: 0 auto;
-  background: #ffffff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  backdrop-filter: blur(15px); /* Desenfoque de fondo */
+  -webkit-backdrop-filter: blur(15px); /* Compatibilidad Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  color: #fff; /* Texto claro para contraste */
 }
 @media screen and (min-width:790px){
   .mi-seccion-3d .container {
@@ -2071,7 +2090,10 @@ p {
 .mi-seccion-3d h2 {
   text-align: center;
   font-size: 24px;
-  color: #444;
+  color: #dadada;
+}
+.mi-seccion-3d p {
+  color: #b7b7b7;
 }
 
 /* Estilos específicos para el visor 3D */
@@ -2079,7 +2101,8 @@ p {
   width: 100%;
   height: 340px;
   border-radius: 10px;
-  background: #d0d0d0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 /* Modal básico */
 .modal {
@@ -2198,5 +2221,93 @@ p {
   }
   
 }
+/* Sección contenedora al 100% de ancho */
+.seccion-plus {
+  width: 100%;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  background: #10101C; 
+}
+
+/* Contenedor interno al 80% centrado */
+.plus-contenido {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Inversión para alternar lado de la imagen */
+.plus-contenido.invertida {
+  flex-direction: row-reverse;
+}
+
+/* Columna de texto */
+.plus-texto {
+  flex: 1;
+  color: #fff; /* Ajusta según tu fondo */
+}
+
+.plus-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.plus-texto p {
+  color: white;
+}
+
+/* Columna de imagen */
+.plus-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.plus-imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ----------------------------- */
+/* Responsive (pantallas ≤ 768px) */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+  .plus-contenido,
+  .plus-contenido.invertida {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .plus-texto {
+    width: 100%;
+  }
+
+  .plus-imagen {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .plus-imagen img {
+    width: 100%;
+    height: auto;
+  }
+
+  .plus-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .plus-texto p {
+    font-size: 1rem;
+  }
+}
+
 
 /*# sourceMappingURL=style.css.map */
