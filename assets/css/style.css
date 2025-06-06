@@ -2323,6 +2323,11 @@ p {
     font-size: 1rem;
   }
 }
+@media screen and (max-width:790px) {
+  .ocultar-mobile{
+  display: none;
+}
+}
 
 
 /*# sourceMappingURL=style.css.map */
