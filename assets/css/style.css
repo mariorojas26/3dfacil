@@ -2119,6 +2119,11 @@ p {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+@media screen and (max-width:790px) {
+  .mi-seccion-3d model-viewer{
+    height: 332px !important;
+  }
+}
 /* Modal básico */
 .modal {
   display: none; /* Oculto al principio */
