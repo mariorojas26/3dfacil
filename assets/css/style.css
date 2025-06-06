@@ -1109,12 +1109,13 @@ p {
 }
 
 .about_image .dots {
-  position: absolute;
-  bottom: 0;
-  right: 20%;
-  z-index: -1;
-  -webkit-animation: dots_2 6s ease-out infinite;
-  animation: dots_2 6s ease-out infinite;
+  width: 141px;
+    position: absolute;
+    bottom: 58px;
+    right: 51%;
+    z-index: -1;
+    -webkit-animation: dots_2 6s ease-out infinite;
+    animation: dots_2 6s ease-out infinite;
 }
 
 @keyframes dots_2 {
