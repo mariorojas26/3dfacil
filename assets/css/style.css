@@ -2082,7 +2082,7 @@ p {
 .mi-seccion-3d {
   padding: 50px 20px;
   position: relative;
-  background-color: #10101C;
+  background-color: transparent;
 }
 /* Contenedor del visor */
 .mi-seccion-3d .container {
@@ -2095,7 +2095,7 @@ p {
   -webkit-backdrop-filter: blur(15px); /* Compatibilidad Safari */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  color: #fff; /* Texto claro para contraste */
+
 }
 @media screen and (min-width:790px){
   .mi-seccion-3d .container {
@@ -2106,18 +2106,14 @@ p {
 .mi-seccion-3d h2 {
   text-align: center;
   font-size: 24px;
-  color: #e7e7e7;
-}
-.mi-seccion-3d p {
-  color: #b7b7b7;
-}
+  }
 
 /* Estilos específicos para el visor 3D */
 .mi-seccion-3d model-viewer {
   width: 100%;
   height: 340px;
   border-radius: 10px;
-  background: transparent;
+  background: rgb(197, 197, 197);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 @media screen and (max-width:790px) {
@@ -2340,5 +2336,72 @@ p {
   }
 }
 
+.custom-experiences {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 2rem;
+}
+
+.custom-card {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+}
+
+.custom-card-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: row;
+  padding: 60px;
+  width: 90%;
+  user-select: auto;
+  min-height: 350px;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.custom-card.reverse .custom-card-content {
+  flex-direction: row-reverse;
+}
+
+.custom-card-text {
+  flex: 1;
+}
+
+.custom-card-text h4 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+
+.custom-card-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-card-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+/* Responsive: en pantallas chicas poner las tarjetas en columna */
+@media (max-width: 768px) {
+  .custom-card-content {
+    flex-direction: column;
+  }
+  .custom-card.reverse .custom-card-content {
+    flex-direction: column;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
