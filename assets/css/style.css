@@ -184,7 +184,7 @@ p {
 
 /*===== All Section Title Style =====*/
 .section_title .title {
-  font-size: 44px;
+  font-size: 30px;
   font-weight: 700;
 }
 .title {
@@ -1752,7 +1752,7 @@ p {
     position: absolute;
     width: 100%;
     padding: 0;
-    top: 1941px;
+    top: 1720px;
     margin: 0;
     overflow: hidden;
 }
@@ -2328,8 +2328,21 @@ p {
   }
 }
 @media screen and (max-width:790px) {
+.column-reverse {
+    flex-direction: column-reverse;
+}
+  .custom-card-text p{
+  margin-bottom: 40px;
+}
+  .custom-card-image video{
+    width: 100% !important;
+    margin-bottom: 40px;
+}
   .ocultar-mobile{
   display: none;
+}
+.custom-card{
+  width: 90% !important;
 }
   .seccion-plus{
     padding: 6rem 0;
@@ -2339,69 +2352,58 @@ p {
 .custom-experiences {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding: 4rem 2rem;
+  gap: 24px; /* Espacio entre tarjetas */
+  align-items: center;
 }
 
 .custom-card {
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.custom-card:hover {
-  transform: translateY(-10px);
+  width: 85%;
+  box-sizing: border-box;
 }
 
 .custom-card-content {
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
   align-items: center;
-  gap: 2rem;
-  flex-direction: row;
-  padding: 60px;
-  width: 90%;
-  user-select: auto;
-  min-height: 350px;
-  justify-content: space-between;
-  margin: 20px auto;
+    min-height: 350px;
 }
-
-.custom-card.reverse .custom-card-content {
-  flex-direction: row-reverse;
-}
-
 .custom-card-text {
-  flex: 1;
+    text-align: left;
 }
-
-.custom-card-text h4 {
-  margin: 0 0 1rem;
-  font-size: 1.5rem;
+.custom-card-text h4{
+     margin-bottom: 40px;
+    font-size: 30px;
 }
-
-
-.custom-card-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.custom-card-text p{
+  line-height: 2;
 }
-
-.custom-card-image img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 12px;
+/* En desktop (768px en adelante): dos columnas 50% cada una */
+@media (min-width: 768px) {
+  .custom-card-text {
+    padding: 0px 30px;
 }
-
-/* Responsive: en pantallas chicas poner las tarjetas en columna */
-@media (max-width: 768px) {
   .custom-card-content {
-    flex-direction: column;
+    flex-direction: row;
   }
+
+  .custom-card-content .custom-card-text,
+  .custom-card-content .custom-card-image {
+    width: 50%;
+  }
+
+  /* Para la clase "reverse", invertimos el orden */
   .custom-card.reverse .custom-card-content {
-    flex-direction: column;
+    flex-direction: row-reverse;
   }
 }
+.custom-card-image video{
+    width: 90%;
+    border-radius: 25px;
+}
+.morado {
+  color: #7E57D1; /* Tu morado */
+  font-weight: bold; /* Opcional: para darle más fuerza */
 
-/*# sourceMappingURL=style.css.map */
+}
