@@ -2436,3 +2436,6 @@ details p::before {
   content: "- "; /* puedes cambiarlo por "-", "»", etc. */
   color: #8C6BC8;
 }
+section.faq {
+    margin-top: 74px;
+}
