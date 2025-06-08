@@ -2410,5 +2410,29 @@ p {
 .morado {
   color: #7E57D1; /* Tu morado */
   font-weight: bold; /* Opcional: para darle más fuerza */
+}
+.faq summary {
+  color: #677284;
+  cursor: pointer;
+  background: #ffffff;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  list-style: none; /* quita el marcador por defecto */
+}
+.container details{
+    border-bottom: 1px solid #d5d5d5;
+    padding: 20px 0px;
 
+}
+
+.faq p {
+  padding: 0.5em;
+  margin: 0;
+}
+details p {
+  padding-left: 2em !important; /* o la cantidad que quieras */
+}
+details p::before {
+  content: "- "; /* puedes cambiarlo por "-", "»", etc. */
+  color: #8C6BC8;
 }
