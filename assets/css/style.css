@@ -1111,7 +1111,7 @@ p {
 .about_image .dots {
   width: 141px;
     position: absolute;
-    bottom: 58px;
+    bottom: 221px;
     right: 51%;
     z-index: -1;
     -webkit-animation: dots_2 6s ease-out infinite;
@@ -2381,6 +2381,9 @@ p {
 }
 /* En desktop (768px en adelante): dos columnas 50% cada una */
 @media (min-width: 768px) {
+    .ocultar-desktop{
+  display: none;
+}
   .custom-card-text {
     padding: 0px 30px;
 }
