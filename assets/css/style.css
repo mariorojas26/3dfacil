@@ -186,10 +186,12 @@ p {
 .section_title .title {
   font-size: 30px;
   font-weight: 700;
+
 }
-.title {
-  font-size: 44px;
+.title{
+  font-size: 30px;
   font-weight: 700;
+  margin-bottom: 30px;
 }
 .center{
   text-align: center;
@@ -1752,7 +1754,7 @@ p {
     position: absolute;
     width: 100%;
     padding: 0;
-    top: 1720px;
+    top: 1680px;
     margin: 0;
     overflow: hidden;
 }
