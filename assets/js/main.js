@@ -119,40 +119,51 @@ const swiper = new Swiper('.testimonial-slider', {
 
 
 // Initialize Swiper
-document.addEventListener('DOMContentLoaded', function() {
-  const swiper = new Swiper('.testimonios-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    centeredSlides: false,
-     loop: true, 
-    loopAdditionalSlides: 1, 
-    loopFillGroupWithBlank: true, 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next-custom',
-      prevEl: '.swiper-button-prev-custom',
-    },
-    breakpoints: {
-      576: {
-        slidesPerView: 2,
-        spaceBetween: 20
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.testimonios-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+       autoHeight: true, // 👈 ESTA ES LA CLAVE
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 25
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 30
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        }
       },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 40
+      on: {
+        init: matchCardHeights,
+        resize: matchCardHeights,
+        slideChange: matchCardHeights
       }
+    });
+
+    function matchCardHeights() {
+      const cards = document.querySelectorAll('.testimonio-card');
+      let maxHeight = 0;
+
+      // Reset heights
+      cards.forEach(card => {
+        card.style.height = 'auto';
+      });
+
+      // Get max height
+      cards.forEach(card => {
+        const h = card.offsetHeight;
+        if (h > maxHeight) maxHeight = h;
+      });
+
+      // Apply max height to all cards
+      cards.forEach(card => {
+        card.style.height = maxHeight + 'px';
+      });
     }
   });
-});
+
