@@ -77,7 +77,7 @@ $(function () {
 
 //===== EFECTO MAQUINA DE ESCRIBIR
 document.addEventListener("DOMContentLoaded", function () {
-  const text = "Permite que tus clientes vean tus productos en su propio entorno.";
+  const text = "Creamos experiencias interactivas que venden por ti.";
   const titleElement = document.getElementById("typewriter-title");
 
   let i = 0;
@@ -107,3 +107,52 @@ window.addEventListener("load", () => {
   }
 });
 
+const swiper = new Swiper('.testimonial-slider', {
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+
+
+// Initialize Swiper
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.testimonios-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: false,
+     loop: true, 
+    loopAdditionalSlides: 1, 
+    loopFillGroupWithBlank: true, 
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-custom',
+      prevEl: '.swiper-button-prev-custom',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 25
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    }
+  });
+});
