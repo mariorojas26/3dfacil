@@ -2365,17 +2365,19 @@ p {
 }
   .custom-card-image video{
     width: 100% !important;
-    margin-bottom: 40px;
 }
   .ocultar-mobile{
   display: none;
 }
 .custom-card{
-  width: 90% !important;
+  width: 100% !important;
 }
   .seccion-plus{
     padding: 6rem 0;
   }
+  #about .boton-minimalista {
+    display: none;
+}
 
 }
 
@@ -2576,3 +2578,8 @@ section.faq {
 .rating-3::before {
   content: "★★★☆☆";
 }
+.data-image {
+ margin-bottom: 40px;
+ max-width: 100%;
+}
+
