@@ -2354,26 +2354,21 @@ p {
     overflow: visible !important;
   }
   .swiper-button-next {
-    right: -9%;
+    right: -9% !important;
  padding: 20px;
   background: #fff;               /* Fondo blanco */
   border-radius: 50%;             /* Redondeado */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
 }
   .swiper-button-prev {
-    left: -9%;
+    left: -9% !important;
  padding: 20px;
   background: #fff;               /* Fondo blanco */
   border-radius: 50%;             /* Redondeado */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
    }
   .imgshapevideo {
-    position: absolute;
-    width: 85% !important;
-    top: -433px !important;
-    z-index: -3;
-    right: -159px !important;
-    transform: scaleX(-1);
+    display: none;
 }
   .data-number {
     font-size: 2rem;
@@ -2411,6 +2406,7 @@ p {
   flex-direction: column;
   gap: 24px; /* Espacio entre tarjetas */
   align-items: center;
+  overflow-x: hidden;
 }
 
 .custom-card {
@@ -2506,6 +2502,7 @@ section.faq {
 /* Add this to your stylesheet */
 #testimonios {
   padding: 80px 20px 0px 20px;  
+  overflow: hidden;
 }
 
 .testimonios-swiper {
