@@ -2350,6 +2350,31 @@ p {
 }
 
 @media screen and (max-width:790px) {
+  .swiper{
+    overflow: visible !important;
+  }
+  .swiper-button-next {
+    right: -9%;
+ padding: 20px;
+  background: #fff;               /* Fondo blanco */
+  border-radius: 50%;             /* Redondeado */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
+  .swiper-button-prev {
+    left: -9%;
+ padding: 20px;
+  background: #fff;               /* Fondo blanco */
+  border-radius: 50%;             /* Redondeado */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+   }
+  .imgshapevideo {
+    position: absolute;
+    width: 85% !important;
+    top: -433px !important;
+    z-index: -3;
+    right: -159px !important;
+    transform: scaleX(-1);
+}
   .data-number {
     font-size: 2rem;
 }
@@ -2583,3 +2608,13 @@ section.faq {
  max-width: 100%;
 }
 
+.imgshapevideo {
+    position: absolute;
+    width: 89%;
+    top: 157px;
+    z-index: -3;
+    right: 947px;
+}
+.contenedor-video-pre{
+  position: relative;
+}
